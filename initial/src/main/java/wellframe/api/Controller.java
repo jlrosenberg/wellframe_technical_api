@@ -45,6 +45,10 @@ public class Controller {
      */
     @RequestMapping(value = "api/v1/medications", method = RequestMethod.POST)
     public ResponseEntity<Medication> medicationPost(@RequestParam(value = "name", defaultValue = "EMPTYNAME") String name) {
+        if (name.equals("EMPTYNAME")) {
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+
         medicineMap.put(currentMedicineID, new Medication(name, currentMedicineID));
         currentMedicineID++;
         return new ResponseEntity(medicineMap.get(currentMedicineID - 1).toJSON(), HttpStatus.OK);
@@ -82,6 +86,10 @@ public class Controller {
                                                @RequestParam(value = "age", defaultValue = "-1") int age
                                                ) {
         //System.out.println("HERE");
+
+        if (firstName.equals("empty") || lastName.equals("empty") || age<0)  {
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
 
         patientMap.put(currentPatientID, new Patient(firstName, lastName, age, currentPatientID));
         currentPatientID++;

@@ -1,3 +1,111 @@
+GET http://localhost:8080/api/v1/patients/?id=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T021407.200.json
+
+###
+
+DELETE http://localhost:8080/api/v1/patients/0/medications/2?id=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/api/v1/patients?id=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T021304.200.json
+
+###
+
+POST http://localhost:8080/api/v1/patients/0/medications?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T021243.200.json
+
+###
+
+POST http://localhost:8080/api/v1/patients/0/medications?id=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T021227.200.json
+
+###
+
+POST http://localhost:8080/api/v1/patients?firstname=Bill&lastname=Evans&age=54
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T021105.200.json
+
+###
+
+POST http://localhost:8080/api/v1/patients?firstname=Bob&lastname=Dylan&age=26
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T021028.200.json
+
+###
+
+GET http://localhost:8080/api/v1/medications?id=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T020945.200.json
+
+###
+
+GET http://localhost:8080/api/v1/medications?id=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T020924.200.json
+
+###
+
+POST http://localhost:8080/api/v1/medications?name=Cortisone
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T020906.200.json
+
+###
+
+POST http://localhost:8080/api/v1/medications?name=Motrin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T020823.200.json
+
+###
+
+POST http://localhost:8080/api/v1/medications?name=Tylenol
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T020801.200.json
+
+###
+
+POST http://localhost:8080/api/v1/medications?name=Bob
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-08T020652.200.json
+
+###
+
+GET http://localhost:8080/api/v1/medications?id=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
 DELETE http://localhost:8080/api/v1/patients/0/medications/0?id=0
 Accept: */*
 Cache-Control: no-cache

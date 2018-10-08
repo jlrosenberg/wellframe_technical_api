@@ -10,13 +10,13 @@ import java.util.List;
  * Represents a Medication. Medications are consumed by {@link Patient}s. A patient can take one or more medications at
  * one time. All Medications must have a unique ID or else there will be major problems with the API. Medication names
  * do not have to be unique.
- *
+ * <p>
  * Future improvements may include:
- *          - Dosage
- *          - Conflicting Medications
- *          - Ingredients
- *          - Warnings
- *          - Enforced Unique IDs
+ * - Dosage
+ * - Conflicting Medications
+ * - Ingredients
+ * - Warnings
+ * - Enforced Unique IDs
  */
 public class Medication implements JSONable {
     private int id;
@@ -53,6 +53,7 @@ public class Medication implements JSONable {
 
     /**
      * Returns the unique ID of this medication.
+     *
      * @return a unique integer ID for this medication.
      */
     public int getId() {
@@ -61,6 +62,7 @@ public class Medication implements JSONable {
 
     /**
      * Returns the non-unique name of this Medicine.
+     *
      * @return a String representing the name of this medicine.
      */
     public String getName() {
@@ -69,6 +71,7 @@ public class Medication implements JSONable {
 
     /**
      * Returns the url of this medicine as used in the API.
+     *
      * @return the url of this medicine as used in the API.
      */
     public String getUrl() {
@@ -83,7 +86,6 @@ public class Medication implements JSONable {
     public JsonNode getContent() {
         return this.toJSON();
     }
-
 
 
     /**
@@ -101,5 +103,16 @@ public class Medication implements JSONable {
         return n;
     }
 
+    public boolean equals(Object o) {
+        if (o instanceof Medication) {
+            if (((Medication) o).getId() == this.id) {
+                return true;
+            }
+        }
+        return false;
 
+    }
 }
+
+
+
