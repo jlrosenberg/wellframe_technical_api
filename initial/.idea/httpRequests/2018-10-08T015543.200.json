@@ -1,0 +1,8 @@
+{
+  "id": 0,
+  "firstName": "jim",
+  "lastName": "bob",
+  "age": 23,
+  "medications": [],
+  "uri": "http://localhost:8080/api/v1/patients/0"
+}
